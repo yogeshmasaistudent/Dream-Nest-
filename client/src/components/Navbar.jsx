@@ -25,7 +25,6 @@ const Navbar = () => {
         <img src="/assets/logo.png" alt="logo" />
       </a>
 
-      
       <div className="navbar_search">
         <input
           type="text"
@@ -63,7 +62,7 @@ const Navbar = () => {
             <Person sx={{ color: variables.darkgrey }} />
           ) : (
             <img
-              src={`http://localhost:3001/${user.profileImagePath.replace(
+              src={`https://dream-nest-kg7w.onrender.com/${user.profileImagePath.replace(
                 "public",
                 ""
               )}`}

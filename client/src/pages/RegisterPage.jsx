@@ -39,10 +39,13 @@ const RegisterPage = () => {
         register_form.append(key, formData[key])
       }
 
-      const response = await fetch("http://localhost:3001/auth/register", {
-        method: "POST",
-        body: register_form
-      })
+      const response = await fetch(
+        "https://dream-nest-kg7w.onrender.com/auth/register",
+        {
+          method: "POST",
+          body: register_form,
+        }
+      );
 
       if (response.ok) {
         navigate("/login")

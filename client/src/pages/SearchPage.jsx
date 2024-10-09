@@ -17,9 +17,12 @@ const SearchPage = () => {
 
   const getSearchListings = async () => {
     try {
-      const response = await fetch(`http://localhost:3001/properties/search/${search}`, {
-        method: "GET"
-      })
+      const response = await fetch(
+        `https://dream-nest-kg7w.onrender.com/properties/search/${search}`,
+        {
+          method: "GET",
+        }
+      );
 
       const data = await response.json()
       dispatch(setListings({ listings: data }))

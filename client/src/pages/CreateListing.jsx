@@ -128,10 +128,13 @@ const CreateListing = () => {
       });
 
       /* Send a POST request to server */
-      const response = await fetch("http://localhost:3001/properties/create", {
-        method: "POST",
-        body: listingForm,
-      });
+      const response = await fetch(
+        "https://dream-nest-kg7w.onrender.com/properties/create",
+        {
+          method: "POST",
+          body: listingForm,
+        }
+      );
 
       if (response.ok) {
         navigate("/");
@@ -381,8 +384,9 @@ const CreateListing = () => {
             </div>
 
             <h3>Add some photos of your place</h3>
+
             <DragDropContext onDragEnd={handleDragPhoto}>
-              <Droppable droppableId="photos" direction="horizontal">
+              <Droppable direction="horizontal">
                 {(provided) => (
                   <div
                     className="photos"
@@ -459,6 +463,8 @@ const CreateListing = () => {
                 )}
               </Droppable>
             </DragDropContext>
+
+
 
             <h3>What make your place attractive and exciting?</h3>
             <div className="description">
